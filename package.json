@@ -1,0 +1,29 @@
+{
+  "name": "science_observations",
+  "version": "1.0.0",
+  "description": "Our web application is designed to encourage high school and college students to participate in science and to teach each other . It will help students understand and enjoy science by collaborating on simple experiments with students from different parts of the globe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristenManning/science_observations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KristenManning/science_observations/issues"
+  },
+  "homepage": "https://github.com/KristenManning/science_observations#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.15.1",
+    "method-override": "^2.3.5",
+    "mysql": "^2.10.2"
+  }
+}
