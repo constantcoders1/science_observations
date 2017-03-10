@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     // The email cannot be null, and must be a proper email before creation
     email: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: false,
       validate: {
         isEmail: true
       }
@@ -19,11 +19,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     keyword: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     }
   }, {
     // Creating a custom method for our User model. This will check if an unhashed password entered by
@@ -37,7 +37,9 @@ module.exports = function(sequelize, DataTypes) {
     // In this case, before a User is created, we will automatically hash their password
     hooks: {
       beforeCreate: function(user, options, cb) {
-        teacher.password = bcrypt.hashSync(teacher.password, bcrypt.genSaltSync(10), null);
+        // user was passed to function so use user
+
+        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
         cb(null, options);
       }
     }
