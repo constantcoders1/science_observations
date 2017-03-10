@@ -20,34 +20,38 @@ module.exports = function(app) {
   
 
     app.post("/api/signup/teacher", function(req, res) {
-    console.log(req.body);
-
-    // need to user teacher db
+    console.log("teacher sign up" );
     db.Teacher.create({
       email: req.body.email,
       password: req.body.password,
-      username: req.body.username,
-      keyword: req.body.keyword,
+
+      // restore when html with the below fields are available
+      // username: req.body.username,
+      // keyword: req.body.keyword,
     }).then(function() {
-      res.redirect(307, "/api/login/teacher");
+      console.log("post teacher sign up then clause")
+      // res.redirect(307, "/api/login/teacher");
     }).catch(function(err) {
+      console.log(err)
       res.json(err);
     });
   });
 
  app.post("/api/signup/student", function(req, res) {
-    console.log(req.body);
+    console.log("student sign up");
      db.Student.create({
       email: req.body.email,
       password: req.body.password,
-      username: req.body.username,
-      keyword: req.body.keyword,
-      country: req.body.country,
-      state: req.body.state,
-      city: req.body.city,
+      // username: req.body.username,
+      // keyword: req.body.keyword,
+      // country: req.body.country,
+      // state: req.body.state,
+      // city: req.body.city,
     }).then(function() {
-      res.redirect(307, "/api/login/student");
+      console.log("post student sign up then clause")
+      // res.redirect(307, "/api/login/student");
     }).catch(function(err) {
+      console.log(err);
       res.json(err);
     });
 

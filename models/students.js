@@ -19,23 +19,23 @@ module.exports = function(sequelize, DataTypes) {
   }, 
   username: {
     type: DataTypes.STRING,
-    allowNull: false,
+    // allowNull: false,
   },
     country: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     state: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     city: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     keyword: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     }
   }, {
     // Creating a custom method for our User model. This will check if an unhashed password entered by
@@ -56,7 +56,7 @@ module.exports = function(sequelize, DataTypes) {
 
     hooks: {
       beforeCreate: function(user, options, cb) {
-        student.password = bcrypt.hashSync(student.password, bcrypt.genSaltSync(10), null);
+        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
         cb(null, options);
       }
     }
