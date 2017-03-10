@@ -41,6 +41,7 @@ module.exports = function(app) {
       email: req.body.email,
       password: req.body.password,
       username: req.body.username,
+      keyword: req.body.keyword,
       country: req.body.country,
       state: req.body.state,
       city: req.body.city,
