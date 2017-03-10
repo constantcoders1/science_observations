@@ -1,29 +1,23 @@
 {
-  "name": "science_observations",
+  "name": "1-Passport-Example",
   "version": "1.0.0",
-  "description": "Our web application is designed to encourage high school and college students to participate in science and to teach each other . It will help students understand and enjoy science by collaborating on simple experiments with students from different parts of the globe.",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KristenManning/science_observations.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KristenManning/science_observations/issues"
-  },
-  "homepage": "https://github.com/KristenManning/science_observations#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.14.2",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.13.3",
-    "express-handlebars": "^2.0.1",
-    "express-session": "^1.15.1",
-    "method-override": "^2.3.5",
-    "mysql": "^2.10.2"
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "mysql": "^2.12.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "sequelize": "^3.27.0"
   }
 }
