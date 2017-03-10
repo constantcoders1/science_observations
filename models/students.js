@@ -15,35 +15,29 @@ module.exports = function(sequelize, DataTypes) {
     // The password cannot be null
     password: {
       type: DataTypes.STRING,
-      // allowNull: false
+      allowNull: false,
   }, 
   username: {
-    type: DataTypes.STRING
-    // allowNull: false
+    type: DataTypes.STRING,
+    allowNull: false,
   },
     country: {
       type: DataTypes.STRING,
-      // allowNull: false
+      allowNull: false,
     },
     state: {
       type: DataTypes.STRING,
-      // allowNull: false
+      allowNull: false,
     },
     city: {
       type: DataTypes.STRING,
-      // allowNull: false
+      allowNull: false,
     },
-    Keyword: {
+    keyword: {
       type: DataTypes.STRING,
-      // allowNull: false
-    },
-
-
-
-
-
-
-  {
+      allowNull: false,
+    }
+  }, {
     // Creating a custom method for our User model. This will check if an unhashed password entered by
     // The user can be compared to the hashed password stored in our database
     instanceMethods: {
@@ -58,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
       // put foregin key stuff here
 
       // put teacher id stuff here
-    }
+    },
 
     hooks: {
       beforeCreate: function(user, options, cb) {

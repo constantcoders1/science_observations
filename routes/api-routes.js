@@ -25,9 +25,9 @@ module.exports = function(app) {
     // need to user teacher db
     db.Teacher.create({
       email: req.body.email,
-      password: req.body.password
-      username: req.body.username
-      keyword: req.body.keyword
+      password: req.body.password,
+      username: req.body.username,
+      keyword: req.body.keyword,
     }).then(function() {
       res.redirect(307, "/api/login/teacher");
     }).catch(function(err) {
@@ -39,11 +39,11 @@ module.exports = function(app) {
     console.log(req.body);
      db.Student.create({
       email: req.body.email,
-      password: req.body.password
-      username: req.body.username
-      country: req.body.country
-      state: req.body.state
-      city: req.body.city
+      password: req.body.password,
+      username: req.body.username,
+      country: req.body.country,
+      state: req.body.state,
+      city: req.body.city,
     }).then(function() {
       res.redirect(307, "/api/login/student");
     }).catch(function(err) {
