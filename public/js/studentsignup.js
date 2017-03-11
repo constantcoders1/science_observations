@@ -43,7 +43,7 @@ $(document).ready(function() {
   // Otherwise we log any errors
   function signUpUser(userData) {
     $.post("/api/signup/student", userData).then(function(data) {
-      window.location.replace(data);
+      // window.location.replace(data);
     }).catch(function(err) {
       console.log(err);
     });
