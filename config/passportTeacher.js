@@ -11,7 +11,7 @@ passport.use(new LocalStrategy(
   },
   function(email, password, done) {
     // When a user tries to sign in this code runs
-    db.User.findOne({
+    db.Teacher.findOne({
       where: {
         email: email
       }
@@ -46,4 +46,4 @@ passport.deserializeUser(function(obj, cb) {
 });
 
 // Exporting our configured passport
-module.exports = passport;
+module.exports = passportTeacher;
